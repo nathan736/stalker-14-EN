@@ -22,6 +22,12 @@ public enum STMercBoardOfferType : byte
 [Serializable, NetSerializable]
 public sealed class STMercBoardOffer
 {
+    /// <summary>Prefix used in offer reference strings (e.g. "MB#3").</summary>
+    public const string OfferRefPrefix = "MB#";
+
+    /// <summary>Formats an offer ID as a bracketed reference string (e.g. "[MB#3]").</summary>
+    public static string FormatRef(uint id) => $"[{OfferRefPrefix}{id}]";
+
     /// <summary>Unique offer ID within the current round.</summary>
     public readonly uint Id;
 

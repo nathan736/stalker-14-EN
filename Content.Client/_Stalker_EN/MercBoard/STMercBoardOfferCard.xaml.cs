@@ -24,8 +24,8 @@ public sealed partial class STMercBoardOfferCard : PanelContainer
     /// <summary>Raised when the owner presses Withdraw on their own card.</summary>
     public event Action<uint>? OnWithdraw;
 
-    /// <summary>Raised when a player presses Contact on another player's card.</summary>
-    public event Action<string>? OnContact;
+    /// <summary>Raised when a player presses Contact on another player's card. Args: (posterMessengerId, offerId).</summary>
+    public event Action<string, uint>? OnContact;
 
     public static readonly Color ServiceBorderColor = Color.FromHex("#4488CC");
     public static readonly Color ServiceOwnBorderColor = Color.FromHex("#66AAEE");
@@ -70,6 +70,8 @@ public sealed partial class STMercBoardOfferCard : PanelContainer
         else
             PosterNameLabel.Text = offer.PosterName;
 
+        OfferIdLabel.Text = $"#{offer.Id}";
+
         PriceLabel.Text = Loc.GetString("st-merc-board-price", ("price", offer.Price));
         DurationLabel.Text = Loc.GetString("st-merc-board-duration", ("duration", offer.Duration));
 
@@ -90,7 +92,7 @@ public sealed partial class STMercBoardOfferCard : PanelContainer
             ActionButton.OnPressed += _ =>
             {
                 if (offer.PosterMessengerId is not null)
-                    OnContact?.Invoke(offer.PosterMessengerId);
+                    OnContact?.Invoke(offer.PosterMessengerId, offer.Id);
             };
         }
 
