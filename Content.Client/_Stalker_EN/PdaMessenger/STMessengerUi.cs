@@ -89,6 +89,12 @@ public sealed partial class STMessengerUi : UIFragment
             ShowCompose(chatId);
         };
 
+        _channelPage.OnOfferLinkClicked += offerId =>
+        {
+            userInterface.SendMessage(new CartridgeUiMessage(
+                new STMessengerNavigateToOfferEvent(offerId)));
+        };
+
         _composePage.OnBack += () =>
         {
             _composePage.Visible = false;
@@ -122,10 +128,23 @@ public sealed partial class STMessengerUi : UIFragment
         if (messengerState.NavigateToChatId is not null && _currentChatId != messengerState.NavigateToChatId)
         {
             _currentChatId = messengerState.NavigateToChatId;
-            _mainPage!.Visible = false;
-            _composePage!.Visible = false;
-            _channelPage!.Visible = true;
-            _channelPage.SetChatId(messengerState.NavigateToChatId);
+
+            if (messengerState.DraftMessage is not null)
+            {
+                // Navigate directly to compose with draft pre-filled
+                _mainPage!.Visible = false;
+                _channelPage!.Visible = false;
+                _replyToId = null;
+                _replySnippet = null;
+                ShowCompose(messengerState.NavigateToChatId, messengerState.DraftMessage);
+            }
+            else
+            {
+                _mainPage!.Visible = false;
+                _composePage!.Visible = false;
+                _channelPage!.Visible = true;
+                _channelPage.SetChatId(messengerState.NavigateToChatId);
+            }
             // Fall through — server already set viewed chat and included messages in this state
         }
 
@@ -168,14 +187,14 @@ public sealed partial class STMessengerUi : UIFragment
         _userInterface?.SendMessage(new CartridgeUiMessage(new STMessengerViewChatEvent(null)));
     }
 
-    private void ShowCompose(string chatId)
+    private void ShowCompose(string chatId, string? initialContent = null)
     {
         _channelPage!.Visible = false;
         _composePage!.Visible = true;
 
         // For DM chats, pass the display name (character name) to the compose page
         _chatDisplayNames.TryGetValue(chatId, out var displayName);
-        _composePage.Setup(chatId, _replyToId, _replySnippet, displayName);
+        _composePage.Setup(chatId, _replyToId, _replySnippet, displayName, initialContent);
     }
 
     private static STMessengerChat? FindChat(STMessengerUiState state, string chatId)

@@ -8,9 +8,10 @@ namespace Content.Client._Stalker_EN.PdaMessenger;
 
 /// <summary>
 /// Channel/DM conversation page showing messages and compose/reply controls.
+/// Implements <see cref="IOfferLinkClickHandler"/> to handle offer reference clicks from message entries.
 /// </summary>
 [GenerateTypedNameReferences]
-public sealed partial class STMessengerChannelPage : BoxContainer
+public sealed partial class STMessengerChannelPage : BoxContainer, IOfferLinkClickHandler
 {
     /// <summary>Raised when the user presses the back button to return to the main page.</summary>
     public event Action? OnBack;
@@ -20,6 +21,9 @@ public sealed partial class STMessengerChannelPage : BoxContainer
 
     /// <summary>Raised when the user presses reply on a message; args are (chatId, messageId, snippet).</summary>
     public event Action<string, uint, string>? OnReply;
+
+    /// <summary>Raised when the user clicks an offer reference link in a message.</summary>
+    public event Action<uint>? OnOfferLinkClicked;
 
     private string _chatId = string.Empty;
     private string _lastChatId = string.Empty;
@@ -60,5 +64,11 @@ public sealed partial class STMessengerChannelPage : BoxContainer
 
         _lastMessageCount = chat.Messages.Count;
         MessageScroll.SetScrollValue(new Vector2(0, float.MaxValue));
+    }
+
+    /// <inheritdoc />
+    public void HandleOfferLinkClick(uint offerId)
+    {
+        OnOfferLinkClicked?.Invoke(offerId);
     }
 }
