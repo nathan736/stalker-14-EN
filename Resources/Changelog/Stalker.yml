@@ -891,5 +891,13 @@
   id: 101
   time: '2026-02-27T22:44:20.110260+00:00'
   url: https://github.com/coolmankid12345/stalker-14-EN/pull/546
+- author: Noguchi47
+  changes:
+  - message: Added various of imported instruments to Yerzhan Alimov trader in Rookie
+      Village
+    type: Add
+  id: 102
+  time: '2026-03-01T02:25:51.357750+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/551
 Name: Stalker
 Order: -1
