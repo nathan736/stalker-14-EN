@@ -1021,5 +1021,12 @@
   id: 111
   time: '2026-03-02T14:10:08.348825+00:00'
   url: https://github.com/coolmankid12345/stalker-14-EN/pull/564
+- author: TheOverwatchVoice
+  changes:
+  - message: Fixes some issues with the military base map
+    type: Add
+  id: 112
+  time: '2026-03-03T00:23:04.467458+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/568
 Name: Stalker
 Order: -1
