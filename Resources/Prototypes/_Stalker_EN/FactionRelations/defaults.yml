@@ -38,6 +38,8 @@
   restrictedFactions:
     - Loners
     - Monolith
+  hiddenFactions:
+    - Journalists
   displayNames:
     ClearSky: Clear Sky
   relations:
