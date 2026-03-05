@@ -1140,5 +1140,12 @@
   id: 124
   time: '2026-03-05T03:50:52.304994+00:00'
   url: https://github.com/coolmankid12345/stalker-14-EN/pull/582
+- author: RebelledCombine
+  changes:
+  - message: Replaced new battery sprites.
+    type: Tweak
+  id: 125
+  time: '2026-03-05T15:38:36.165034+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/584
 Name: Stalker
 Order: -1
