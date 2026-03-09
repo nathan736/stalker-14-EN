@@ -53,7 +53,7 @@ public sealed partial class STNewsUiFragment : BoxContainer, INewsLinkClickHandl
 
     private static readonly Vector2 FactionIconSize = new(20, 20);
     private static readonly Vector2 ColorSwatchSize = new(24, 24);
-    private static readonly Vector2 ReactionIconSize = new(16, 16);
+    private static readonly Vector2 ReactionIconSize = new(20, 20);
     private static readonly Vector2 PickerIconSize = new(20, 20);
     private static readonly Color PickerBackdropColor = Color.FromHex("#1a1a2eEE");
 
@@ -409,24 +409,22 @@ public sealed partial class STNewsUiFragment : BoxContainer, INewsLinkClickHandl
             vbox.AddChild(previewLabel);
         }
 
-        var buttonRow = new BoxContainer
+        var articleId = article.Id;
+
+        // Separate row prevents reaction wrapping from stretching action buttons
+        if (_lastArticleReactions.TryGetValue(article.Id, out var reactions) && reactions.Count > 0)
+        {
+            vbox.AddChild(BuildCompactReactionBar(article.Id, reactions));
+        }
+
+        var actionRow = new BoxContainer
         {
             Orientation = LayoutOrientation.Horizontal,
             HorizontalExpand = true,
+            HorizontalAlignment = HAlignment.Right,
             SeparationOverride = 4,
             Margin = new Thickness(0, 4, 0, 0),
         };
-
-        var articleId = article.Id;
-
-        // Compact reactions (left side)
-        if (_lastArticleReactions.TryGetValue(article.Id, out var reactions) && reactions.Count > 0)
-        {
-            buttonRow.AddChild(BuildCompactReactionBar(article.Id, reactions));
-        }
-
-        // Spacer pushes buttons to the right
-        buttonRow.AddChild(new Control { HorizontalExpand = true });
 
         if (canDelete)
         {
@@ -435,7 +433,7 @@ public sealed partial class STNewsUiFragment : BoxContainer, INewsLinkClickHandl
                 Text = Loc.GetString("st-news-delete-button"),
             };
             deleteButton.OnPressed += _ => OnDeleteArticle?.Invoke(articleId);
-            buttonRow.AddChild(deleteButton);
+            actionRow.AddChild(deleteButton);
         }
 
         var copyButton = new Button
@@ -444,16 +442,16 @@ public sealed partial class STNewsUiFragment : BoxContainer, INewsLinkClickHandl
         };
         copyButton.OnPressed += _ =>
             _clipboard.SetText(FormatNewsLink(articleId));
-        buttonRow.AddChild(copyButton);
+        actionRow.AddChild(copyButton);
 
         var readButton = new Button
         {
             Text = Loc.GetString("st-news-read-button"),
         };
         readButton.OnPressed += _ => OnRequestArticle?.Invoke(articleId);
-        buttonRow.AddChild(readButton);
+        actionRow.AddChild(readButton);
 
-        vbox.AddChild(buttonRow);
+        vbox.AddChild(actionRow);
 
         card.AddChild(vbox);
         return card;
@@ -673,10 +671,11 @@ public sealed partial class STNewsUiFragment : BoxContainer, INewsLinkClickHandl
     /// </summary>
     private Control BuildCompactReactionBar(int articleId, List<STReactionSummary> reactions)
     {
-        var row = new BoxContainer
+        var row = new WrapContainer
         {
-            Orientation = LayoutOrientation.Horizontal,
+            LayoutAxis = Axis.Horizontal,
             SeparationOverride = 6,
+            CrossSeparationOverride = 4,
         };
 
         foreach (var reaction in reactions)
@@ -730,9 +729,8 @@ public sealed partial class STNewsUiFragment : BoxContainer, INewsLinkClickHandl
 
         DetailReactionBar.AddChild(addButton);
 
-        // Spacer pushes copy link button to the right
-        DetailReactionBar.AddChild(new Control { HorizontalExpand = true });
-
+        // Copy-link button in its own right-aligned row
+        DetailActionRow.RemoveAllChildren();
         var copyLinkBtn = new Button
         {
             Text = Loc.GetString("st-news-copy-link-button"),
@@ -742,7 +740,7 @@ public sealed partial class STNewsUiFragment : BoxContainer, INewsLinkClickHandl
             if (_detailArticleId is { } id)
                 _clipboard.SetText(FormatNewsLink(id));
         };
-        DetailReactionBar.AddChild(copyLinkBtn);
+        DetailActionRow.AddChild(copyLinkBtn);
     }
 
     /// <summary>

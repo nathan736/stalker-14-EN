@@ -51,8 +51,11 @@
                     <RichTextLabel Name="DetailContent" HorizontalExpand="True"/>
 
                     <!-- Reaction Bar -->
-                    <BoxContainer Name="DetailReactionBar" Orientation="Horizontal" SeparationOverride="4"
-                                  Margin="0 8 0 0" HorizontalExpand="True" HorizontalAlignment="Stretch"/>
+                    <WrapContainer Name="DetailReactionBar" LayoutAxis="Horizontal" SeparationOverride="4"
+                                   CrossSeparationOverride="4" Margin="0 8 0 0" HorizontalExpand="True"
+                                   HorizontalAlignment="Stretch"/>
+                    <BoxContainer Name="DetailActionRow" Orientation="Horizontal" HorizontalExpand="True"
+                                  HorizontalAlignment="Right" SeparationOverride="4" Margin="0 4 0 0"/>
 
                     <!-- Comments Section -->
                     <PanelContainer StyleClasses="LowDivider" Margin="0 8 0 4"/>
