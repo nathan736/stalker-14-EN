@@ -2,7 +2,7 @@
   name: АК-12
   suffix: ST, t4
   parent: STBaseWeaponRifle
-  id: STWeaponRifleStalkerAK12
+  id: STWeaponRifleStalkerAK12en
   description: This model represents the pinnacle of AK system development and differs from previous generations in its thoughtful ergonomics, adaptation to round-the-clock use, and increased accuracy and consistency of fire.
   components:
   - type: STWeight

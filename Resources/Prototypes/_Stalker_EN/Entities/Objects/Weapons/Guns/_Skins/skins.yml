@@ -78,7 +78,7 @@
 
 # AK12
 - type: entity
-  parent: STWeaponRifleStalkerAK12
+  parent: STWeaponRifleStalkerAK12en
   id: STWeaponRifleStalkerAK12Dolg
   name: AK-12 "Spear"
   description: An AK-12 rifle clad in a red camouflage pattern. Chambered in 5.45x39. It seems to be commonly used by the Duty clan of stalkers.
