@@ -258,7 +258,6 @@
         ClothingGoPro: 250
         TrashDetectorTier1: 200
         STBoltBagFilled: 50
-        STLeadPlate: 500
         ZoneAnomalyDetectorAD1: 550
 
     - name: shop-category-utilities

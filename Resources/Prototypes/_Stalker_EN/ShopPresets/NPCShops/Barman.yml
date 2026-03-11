@@ -362,7 +362,6 @@
         # Bolt bags
         STBoltBagFilled: 50
         STBoltBagOliveGrayFilled: 50
-        STLeadPlate: 500
         # Artifact containers
         BoxArtcont: 500
         BoxArtcontBlack: 500

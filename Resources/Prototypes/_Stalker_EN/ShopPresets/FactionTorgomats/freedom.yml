@@ -247,7 +247,6 @@
       priority: 9
       items:
         STBoltBagFilled: 50
-        STLeadPlate: 500
         BoxArtcont: 250 # T1
         BoxArtcontBlack: 250
         BoxArtcontBlue: 250

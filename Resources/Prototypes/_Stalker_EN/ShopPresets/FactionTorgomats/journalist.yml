@@ -76,7 +76,3 @@
         STElasticRubberGreen: 50
         STElasticRubberBlue: 50
         FoldedFlagHelper: 250
-    - name: shop-category-research-equipment
-      priority: 8
-      items:
-        STLeadPlate: 200
