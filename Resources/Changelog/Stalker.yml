@@ -1387,5 +1387,23 @@
   id: 148
   time: '2026-03-11T18:43:23.518405+00:00'
   url: https://github.com/coolmankid12345/stalker-14-EN/pull/617
+- author: Roland410
+  changes:
+  - message: Optimized dev map lighting.
+    type: Tweak
+  id: 149
+  time: '2026-03-12T18:42:29.812208+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/620
+- author: teecoding
+  changes:
+  - message: PDA messenger now has private faction channels so you can gossip about
+      the other bands without them knowing
+    type: Add
+  - message: Only General and Rookie channels broadcast to Discord now. Your faction
+      secrets stay in the Zone
+    type: Tweak
+  id: 150
+  time: '2026-03-12T18:59:56.305099+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/621
 Name: Stalker
 Order: -1
