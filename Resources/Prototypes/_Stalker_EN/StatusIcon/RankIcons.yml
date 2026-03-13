@@ -7,6 +7,8 @@
   hideOnStealth: true
   priority: 11
   allowSelection: false
+  layer: Base
+  xOffset: 0
 
 - type: jobIcon
   parent: STRankBase
