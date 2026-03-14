@@ -20,10 +20,10 @@ public sealed class STCharacterRankSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<STCharacterRankComponent, GetStatusIconsEvent>(OnGetStatusIcon);
+        //SubscribeLocalEvent<STCharacterRankComponent, GetStatusIconsEvent>(OnGetStatusIcon);
     }
 
-    private void OnGetStatusIcon(EntityUid uid, STCharacterRankComponent comp, ref GetStatusIconsEvent args)
+    /*private void OnGetStatusIcon(EntityUid uid, STCharacterRankComponent comp, ref GetStatusIconsEvent args)
     {
         if (_appearance.TryGetData<TypingIndicatorState>(uid, TypingIndicatorVisuals.State, out var typingState)
             && typingState != TypingIndicatorState.None)
@@ -34,5 +34,5 @@ public sealed class STCharacterRankSystem : EntitySystem
 
         if (_proto.TryIndex(comp.RankIconId, out var icon))
             args.StatusIcons.Add(icon);
-    }
+    }*/
 }
