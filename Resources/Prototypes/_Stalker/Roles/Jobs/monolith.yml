@@ -55,7 +55,8 @@
         - Monolith
       - type: ActiveRadio
         channels:
-        - Monolith # Stalker EN change end
+        - Monolith
+        GlobalReceive: true # Stalker EN change end
 
 - type: job
   id: StalkerHeadMonolith
@@ -114,7 +115,8 @@
       - Monolith
     - type: ActiveRadio
       channels:
-      - Monolith # Stalker EN change end
+      - Monolith
+      GlobalReceive: true # Stalker EN change end
 
 - type: startingGear
   id: MonolithGear
