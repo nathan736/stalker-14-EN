@@ -296,7 +296,7 @@ public sealed partial class STMessengerSystem : EntitySystem
         var isDm = chatId.StartsWith(STMessengerChat.DmChatPrefix, StringComparison.Ordinal);
 
         // Effective anonymous flag: only allowed for non-DM channels that explicitly permit it
-        var isAnonymous = send.IsAnonymous && !isDm;
+        isAnonymous = isAnonymous && !isDm;
 
         // Determine display name: anonymous pseudonym for channels, real name for DMs
         var displayName = isAnonymous

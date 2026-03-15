@@ -13,10 +13,8 @@ using Content.Shared._Stalker_EN.Camera;
 using Content.Shared.CartridgeLoader;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
-using Content.Shared.Hands.EntitySystems;
 using Content.Shared.PDA.Ringer;
 using Content.Shared._Stalker.Bands;
-using Content.Shared._Stalker_EN.Camera;
 using Content.Shared._Stalker_EN.CCVar;
 using Content.Shared._Stalker_EN.FactionRelations;
 using Content.Shared._Stalker_EN.News;
@@ -43,7 +41,6 @@ public sealed partial class STNewsSystem : EntitySystem
     [Dependency] private readonly IServerDbManager _dbManager = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly RingerSystem _ringer = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly SharedSTFactionResolutionSystem _factionResolution = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedHandsSystem _hands = default!;
@@ -373,21 +370,6 @@ public sealed partial class STNewsSystem : EntitySystem
             LogType.STNews,
             LogImpact.Low,
             $"{ToPrettyString(args.Actor):player} published news article: \"{title}\"");
-
-        Guid? photoId = null;
-        byte[]? photoData = null;
-        if (publish.PhotoEntity is { } photoNetEntity)
-        {
-            var photoUid = GetEntity(photoNetEntity);
-            if (TryComp<STPhotoComponent>(photoUid, out var photoComp)
-                && photoComp.ImageData.Length > 0
-                && _handsSystem.TryGetActiveItem(args.Actor, out var activeItem)
-                && activeItem == photoUid)
-            {
-                photoId = Guid.NewGuid();
-                photoData = photoComp.ImageData;
-            }
-        }
 
         PublishArticleAsync(title, content, author, publish.EmbedColor, photoId, photoData);
     }
