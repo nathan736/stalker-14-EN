@@ -20,6 +20,5 @@ public sealed partial class STPhotoComponent : Component
     /// JPEG-encoded image data. Server-only storage, NOT auto-networked.
     /// Transferred on demand via STPhotoResponseEvent.
     /// </summary>
-    [DataField]
     public byte[] ImageData = Array.Empty<byte>();
 }
