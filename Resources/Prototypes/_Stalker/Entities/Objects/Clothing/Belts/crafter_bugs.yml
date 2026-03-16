@@ -22,7 +22,8 @@
     blacklist:
       tags:
       - STArtifact
-    whitelist:
+      - Khabar #stalker-en change stops monster parts counting as material Probably..
+    whitelist: 
       components:
         - Material
   - type: Item
