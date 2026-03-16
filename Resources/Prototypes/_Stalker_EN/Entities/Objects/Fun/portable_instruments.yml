@@ -9,6 +9,20 @@
     anchored: true
   - type: Clickable
   - type: GravityAffected
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+      #  mask:
+      #  - MachineMask
+      #  layer:
+      #  - MidImpassable
+      #  - LowImpassable
   - type: Pullable
   - type: Tag
     tags:
@@ -27,6 +41,20 @@
   #    modifier: 0.5
   - type: Transform
     anchored: false
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+      #  mask:
+      #  - MachineMask
+      #  layer:
+      #  - MidImpassable
+      #  - LowImpassable
   - type: Clickable
   - type: Anchorable
 
@@ -62,6 +90,20 @@
     interfaces:
       enum.InstrumentUiKey.Key:
         type: InstrumentBoundUserInterface
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 80
+        #mask:
+        #- Impassable
+        #- MidImpassable
+        layer:
+        - Opaque
+        #- MidImpassable
+        #- BulletImpassable
   - type: StaticPrice
     price: 300
   - type: RequireProjectileTarget
