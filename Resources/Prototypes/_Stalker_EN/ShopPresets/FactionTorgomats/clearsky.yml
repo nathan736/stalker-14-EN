@@ -157,7 +157,7 @@
       STWeaponRifleAKS74: 3500
       STWeaponRifleAKM: 3500
       STWeaponRifleStalkerAK105SwampThing: 4000
-      STMetroWeaponRifleVSV: 4500
+      STMetroWeaponRifleVSV: 5000
       # Snipers
       STWeaponSniperVepr: 4000
 
@@ -393,6 +393,11 @@
       STElasticRubberGreen: 50
       STElasticRubberBlue: 50
       FoldedFlagCS: 250
+      # Cameras
+      STCamera: 750
+      STCameraVintage: 1200
+      STCameraDamaged: 400
+      STCameraFilm: 150
 
   - name: shop-category-modules
     priority: 11
@@ -406,6 +411,10 @@
       STModuleSilencerSMGT1: 600
       STModuleSniperSightT1: 600
       STModuleSilencerSniperT1: 600
+      STModuleSilencerRiflesT2Ru: 2800
+      STModuleSilencerRiflesT2Nato: 2800
+      STModuleSilencerSniperT2: 2800
+      STModuleSilencerSMGT2: 2800
 
   - name: shop-category-customization
     priority: 12

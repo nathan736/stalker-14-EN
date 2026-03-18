@@ -21,6 +21,6 @@ public sealed class STCharacterRankExamineSystem : EntitySystem
 
         var rankText = Loc.GetString("st-rank-examine",
             ("rank", Loc.GetString(comp.RankName)));
-        args.PushMarkup(rankText);
+        args.PushMarkup(rankText, -1);
     }
 }

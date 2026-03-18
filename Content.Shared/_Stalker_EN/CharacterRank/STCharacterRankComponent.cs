@@ -26,7 +26,7 @@ public sealed partial class STCharacterRankComponent : Component
     /// <summary>
     /// Localization key for the rank's display name. Server-only to avoid dirtying on every flush.
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public LocId RankName = "st-rank-novice";
 
     /// <summary>

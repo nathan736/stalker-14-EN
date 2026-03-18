@@ -321,6 +321,11 @@
       STElasticRubberGreen: 50
       STElasticRubberBlue: 50
       FoldedFlagHelper: 250
+      # Cameras
+      STCamera: 750
+      STCameraVintage: 1200
+      STCameraDamaged: 400
+      STCameraFilm: 150
 
   - name: shop-category-paperwork
     priority: 11
@@ -423,3 +428,8 @@
       AcousticGuitarInstrument: 500
       AccordionInstrument: 500
       HarmonicaInstrument: 500
+
+  - name: shop-category-blueprints
+    priority: 13
+    items:
+      STCookingBerryJam: 2000

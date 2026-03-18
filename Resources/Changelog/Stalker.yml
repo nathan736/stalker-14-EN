@@ -1503,5 +1503,149 @@
   id: 157
   time: '2026-03-13T22:42:44.954366+00:00'
   url: https://github.com/coolmankid12345/stalker-14-EN/pull/628
+- author: teecoding
+  changes:
+  - message: Your HUD theme preference no longer resets every time you join the server
+    type: Fix
+  id: 158
+  time: '2026-03-14T17:53:46.972095+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/633
+- author: teecoding
+  changes:
+  - message: Reconnecting after your body was deleted no longer traps you as a ghost
+    type: Fix
+  id: 159
+  time: '2026-03-14T18:02:27.926732+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/634
+- author: dallaszzz
+  changes:
+  - message: T2 suppressors can now be bought from kesha and CS
+    type: Add
+  id: 160
+  time: '2026-03-15T19:45:52.571767+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/636
+- author: teecoding
+  changes:
+  - message: Cameras! Capture what you see before an anomaly captures you. Comes in
+      standard, vintage, and damaged flavors
+    type: Add
+  - message: Replaceable film cartridges because nothing in the Zone lasts forever.
+      5 shots per roll
+    type: Add
+  - message: Photo viewer and photo attachments in news articles. Proof or it didn't
+      happen
+    type: Add
+  - message: Photos and cameras survive in stashes across rounds. Your memories are
+      safe, even if you aren't
+    type: Add
+  - message: Every faction vendor now stocks cameras and film. Even bandits appreciate
+      good photography
+    type: Add
+  - message: News cartridge no longer wastes space at the bottom of your PDA screen
+    type: Fix
+  id: 161
+  time: '2026-03-15T19:48:40.366787+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/638
+- author: teecoding
+  changes:
+  - message: Default HUD theme now uses dark Stalker-styled slot backgrounds
+    type: Tweak
+  id: 162
+  time: '2026-03-15T20:43:52.181120+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/640
+- author: dallaszzz
+  changes:
+  - message: Fixes weather in the stash
+    type: Fix
+  - message: Enables weather on wood tiles without roofs
+    type: Tweak
+  id: 163
+  time: '2026-03-16T13:01:06.208270+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/643
+- author: teecoding
+  changes:
+  - message: Buyback entries are now properly cleared when closing a shop or disconnecting
+    type: Fix
+  - message: Reduced memory allocations in the shop buyback system
+    type: Tweak
+  id: 164
+  time: '2026-03-17T11:00:28.306404+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/653
+- author: Roland410
+  changes:
+  - message: Expands faction and personal stash capacity to 2000 and 500 kilograms
+      respectively, removing the need to stuff amoebas into stashes.
+    type: Tweak
+  id: 165
+  time: '2026-03-17T11:03:47.617976+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/644
+- author: dallaszzz
+  changes:
+  - message: Groza can now take a scope and muzzle
+    type: Tweak
+  id: 166
+  time: '2026-03-17T19:06:41.005168+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/655
+- author: stickycheZ101
+  changes:
+  - message: added new portable instrument packs, special kits sold by the instrument
+      vendor that can be unpacked/repacked into/from the structure instruments, so
+      you can play the piano while out and about
+    type: Add
+  id: 167
+  time: '2026-03-17T19:14:03.255749+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/637
+- author: Roland410
+  changes:
+  - message: Makes all tress cuttable and stumps climbable.
+    type: Tweak
+  - message: Makes the hatchet cut trees and logs faster.
+    type: Tweak
+  id: 168
+  time: '2026-03-17T19:16:35.006839+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/659
+- author: Noguchi47
+  changes:
+  - message: New Sawed-off TOZ-34 sprites made by Wassuy
+    type: Add
+  id: 169
+  time: '2026-03-18T07:48:12.520992+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/662
+- author: teecoding
+  changes:
+  - message: Radar detector no longer picks up artifacts and anomalies that are inside
+      containers
+    type: Fix
+  - message: Radar sweep no longer misses blips near the top of the display
+    type: Fix
+  - message: Radar should be rotated correctly.
+    type: Fix
+  id: 170
+  time: '2026-03-18T07:49:40.055064+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/665
+- author: dallaszzz
+  changes:
+  - message: Voicelines to every faction
+    type: Add
+  - message: Grenade prime sfx was changed
+    type: Tweak
+  id: 171
+  time: '2026-03-18T08:03:45.951438+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/663
+- author: crocodilecarousel
+  changes:
+  - message: Jarred food recipes
+    type: Add
+  - message: Jars
+    type: Add
+  - message: The ability to jerk meat by adding spice mix to raw meat
+    type: Add
+  - message: Moonshine stills can be used to make moonshine
+    type: Add
+  - message: Cooking guide and homemade cookbook to store recipes
+    type: Add
+  id: 172
+  time: '2026-03-18T08:09:31.120793+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/664
 Name: Stalker
 Order: -1

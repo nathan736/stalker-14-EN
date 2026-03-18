@@ -38,6 +38,7 @@
       - type: PersonalDamageBlock
       - type: Damageable
         damageContainer: Biological
+        damageModifierSet: Monolith # Stalker EN change
       - type: BlockTackingHolyItems
       - type: TeethPull
         teethProto: ToothStalker
@@ -47,7 +48,21 @@
       - type: STAnomalyTipsViewing
       - type: AutoImplant
         implants:
-        - STSeraBombImplant
+        - STMonoBombImplant # Stalker EN change start
+      - type: IntrinsicRadioReceiver
+      - type: IntrinsicRadioTransmitter
+        channels:
+        - Monolith
+      - type: ActiveRadio
+        channels:
+        - Monolith
+        GlobalReceive: true
+      - type: Vocal
+        sounds:
+          Male: MaleHumanMonolith
+          Female: FemaleHumanMonolith
+          Unsexed: MaleHumanMonolith
+      - type: PsyVoiceEmote # stalker EN change end
 
 - type: job
   id: StalkerHeadMonolith
@@ -89,6 +104,7 @@
     - type: PersonalDamageBlock
     - type: Damageable
       damageContainer: Biological
+      damageModifierSet: Monolith # Stalker EN change
     - type: BlockTackingHolyItems
     - type: TeethPull
       teethProto: ToothStalker
@@ -98,12 +114,26 @@
     - type: STAnomalyTipsViewing
     - type: AutoImplant
       implants:
-      - STSeraBombImplant
+      - STMonoBombImplant # Stalker EN change start
+    - type: IntrinsicRadioReceiver
+    - type: IntrinsicRadioTransmitter
+      channels:
+      - Monolith
+    - type: ActiveRadio
+      channels:
+      - Monolith
+      GlobalReceive: true
+    - type: Vocal
+      sounds:
+        Male: MaleHumanMonolith
+        Female: FemaleHumanMonolith
+        Unsexed: MaleHumanMonolith
+    - type: PsyVoiceEmote # stalker EN change end
 
 - type: startingGear
   id: MonolithGear
   equipment:
-    ears: STClothingChip
+    #ears: STClothingChip # stalker EN
     id: MonolithPDA
     dogtag: ClothingNeckDogtagMonolith # EN
     torso: ClothingTorsoTurtlenecksMonolithCamouflage
@@ -118,3 +148,10 @@
   hierarchy:
     1: StalkerMonolith
     2: StalkerHeadMonolith
+
+- type: damageModifierSet # Stalker EN change 
+  id: Monolith
+  class: 0
+  coefficients:
+    Radiation: 0
+    Psy: 0
