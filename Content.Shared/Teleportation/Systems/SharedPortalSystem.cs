@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Content.Shared.Access.Systems;
 using Content.Shared.Ghost;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Systems;
@@ -13,6 +14,7 @@ using Robust.Shared.Physics.Dynamics;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
+using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
 namespace Content.Shared.Teleportation.Systems;
@@ -31,6 +33,8 @@ public abstract class SharedPortalSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly PullingSystem _pulling = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly AccessReaderSystem _access = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     private const string PortalFixture = "portalFixture";
     private const string ProjectileFixture = "projectile";
@@ -128,6 +132,7 @@ public abstract class SharedPortalSystem : EntitySystem
                 // if target is a portal, signal that they shouldn't be immediately teleported back
                 var timeout = EnsureComp<PortalTimeoutComponent>(subject);
                 timeout.EnteredPortal = ent;
+                timeout.Cooldown = ent.Comp.Cooldown + _timing.CurTime; // stalker-en-changes
                 Dirty(subject, timeout);
             }
 
@@ -137,6 +142,14 @@ public abstract class SharedPortalSystem : EntitySystem
 
         if (_netMan.IsClient)
             return;
+
+        // stalker-en-changes
+        if (!ent.Comp.AccessLocked)
+        {
+            if (!_access.IsAllowed(subject, args.OurEntity))
+                return;
+        }
+        // stalker-en-changes-end
 
         // no linked entity--teleport randomly
         if (ent.Comp.RandomTeleport)
