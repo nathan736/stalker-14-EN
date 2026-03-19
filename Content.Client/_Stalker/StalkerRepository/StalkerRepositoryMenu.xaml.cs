@@ -182,25 +182,7 @@ public sealed partial class StalkerRepositoryMenu : DefaultWindow
             if (!category.Any())
                 return;
 
-            ItemContainer.AddChild(new PanelContainer
-            {
-                PanelOverride = new StyleBoxFlat
-                {
-                    BackgroundColor = Color.FromHex("#000000FF"),
-                    BorderColor = Color.FromHex("#4A4A4A"),
-                    BorderThickness = new Thickness(2),
-                },
-                HorizontalExpand= true,
-                Children =
-                {
-                    new RichTextLabel
-                    {
-                        Text = $"[bold][color=orange]{category.Key.ToUpper()}[/color][/bold]",
-                        Margin = new Thickness(5, 10),
-                        HorizontalExpand = true,
-                    },
-                },
-            });
+            ItemContainer.AddChild(new ItemCategory(category.Key));
             var containedItems = new GridContainer()
             {
                 Columns = 2,
