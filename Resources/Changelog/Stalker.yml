@@ -1654,5 +1654,18 @@
   id: 173
   time: '2026-03-19T10:37:45.092014+00:00'
   url: https://github.com/coolmankid12345/stalker-14-EN/pull/658
+- author: dallaszzz & @TheOverwatchVoice
+  changes:
+  - message: Freedoms base has had many changes
+    type: Tweak
+  - message: a certain spot in RF has been changed a fair bit
+    type: Tweak
+  - message: an area lacking roofs in DV has been fixed
+    type: Fix
+  - message: a swastika hidden in the rocks in RF
+    type: Remove
+  id: 174
+  time: '2026-03-19T10:39:29.316796+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/666
 Name: Stalker
 Order: -1
