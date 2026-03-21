@@ -104,6 +104,7 @@
         # Snipers
         STWeaponSniperMosin: 1200
         #STWeaponSniperSVDSGrass: 8400 Removed for early wipe
+        STBoltACR: 8000
 
 
     - name: shop-category-magazines

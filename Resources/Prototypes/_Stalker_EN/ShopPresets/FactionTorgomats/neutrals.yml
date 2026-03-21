@@ -131,6 +131,7 @@
       # Snipers
       STWeaponSniperSKS: 1850 # T2
       STWeaponSniperMosin: 1500
+      STBoltACR: 10000
 
   - name: shop-category-magazines
     priority: 2

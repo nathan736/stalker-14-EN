@@ -2,7 +2,7 @@
   parent: STBaseWeaponRifle
   id: STBoltACR
   name: Bolt ACR
-  description: "Beloved by the Crulity Squad."
+  description: "An experimental energy weapon that deals radiation damage and recharges its own ammo. Shoots quite slow and deals little damage compared to conventional firearms. Beloved by the Crulity Squad."
   components:
   - type: STWeight
     self: 8

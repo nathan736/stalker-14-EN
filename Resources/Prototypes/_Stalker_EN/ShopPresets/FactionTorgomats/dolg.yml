@@ -61,6 +61,7 @@
         STWeaponSniperMosin: 1200
         STWeaponSniperSKS: 1500
         # STWeaponSniperSVU: 8400 Removed for early wipe
+        STBoltACR: 8000
 
     - name: shop-category-magazines
       priority: 2

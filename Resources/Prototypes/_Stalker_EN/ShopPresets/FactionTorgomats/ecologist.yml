@@ -21,6 +21,7 @@
         STWeaponRifleAKS74U: 2050
         STWeaponRifleM16: 3200
         STWeaponRifleAKS74: 3800
+        STBoltACR: 6000
 
     - name: shop-category-magazines
       priority: 2

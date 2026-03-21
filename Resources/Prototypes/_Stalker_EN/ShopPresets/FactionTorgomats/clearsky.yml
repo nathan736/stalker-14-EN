@@ -160,6 +160,7 @@
       STMetroWeaponRifleVSV: 5000
       # Snipers
       STWeaponSniperVepr: 4000
+      STBoltACR: 5000
 
   - name: shop-category-magazines
     priority: 2

@@ -184,6 +184,7 @@
         STWeaponRifleL85: 2250
         STWeaponRifleAKM: 6700
         STWeaponRifleFAL: 3000
+        STBoltACR: 10000
 
     - name: shop-category-magazines
       priority: 2

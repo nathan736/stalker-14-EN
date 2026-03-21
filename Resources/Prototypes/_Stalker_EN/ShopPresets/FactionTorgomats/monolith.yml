@@ -1,4 +1,4 @@
-﻿# not actually a torg but whatevr
+# not actually a torg but whatevr
 - type: vendingMachineInventory
   id: MonolithInventoryEN
   startingInventory:
@@ -29,6 +29,10 @@
     Matchbox: 5
     MonolithInventoryRestockEN: 1
     Screwdriver: 1
+    STWeaponMachineGunPKM: 1
+    Magazine762x39PKM: 6
+    GaussRifle: 5
+    GaussMag: 25
 
 - type: entity
   parent: BaseItem
