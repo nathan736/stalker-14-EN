@@ -1729,5 +1729,12 @@
   id: 182
   time: '2026-03-20T20:21:23.220652+00:00'
   url: https://github.com/coolmankid12345/stalker-14-EN/pull/681
+- author: DuckManZach
+  changes:
+  - message: Updated the Stash UI to be more usable
+    type: Tweak
+  id: 183
+  time: '2026-03-22T11:19:52.396274+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/670
 Name: Stalker
 Order: -1
