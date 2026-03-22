@@ -5,7 +5,7 @@
   suffix: ST, Stalker, Seeds
   components:
     - type: Seed
-      seedId: rice
+      seedId: riceST
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/rice.rsi
 
@@ -86,7 +86,7 @@
   suffix: ST, Stalker, Seeds
   components:
     - type: Seed
-      seedId: potato
+      seedId: potatoST
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/potato.rsi
 
