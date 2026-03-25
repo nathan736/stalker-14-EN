@@ -162,6 +162,12 @@ public abstract class SharedPortalSystem : EntitySystem
             // pick a target and teleport there
             var target = _random.Pick(link.LinkedEntities);
 
+            if (target == EntityUid.Invalid || !EntityManager.EntityExists(target))
+                return;
+
+            if (!HasComp<TransformComponent>(target))
+                return;
+
             if (HasComp<PortalComponent>(target))
             {
                 // if target is a portal, signal that they shouldn't be immediately teleported back
