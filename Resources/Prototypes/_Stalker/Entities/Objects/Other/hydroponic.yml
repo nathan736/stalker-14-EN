@@ -176,9 +176,6 @@
   - type: Craftable
   - type: RepositoryItem
     categoryName: repository-tools-category
-  - type: Utensil #EN start
-    types:
-    - Knife #EN end
 
 - type: entity
   name: маленькая тяпка
