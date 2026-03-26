@@ -42,6 +42,8 @@ public sealed class MiracleMachineSpawnerSystem : EntitySystem
         if(_miracleMachineSpawnerTime >= _timing.CurTime)
             return;
 
+        _activeGhosts.RemoveAll(x => x == EntityUid.Invalid || Deleted(x));
+
         var query = EntityQueryEnumerator<MiracleMachineSpawnerComponent>();
             while (query.MoveNext(out var uid, out var comp))
             {
@@ -50,6 +52,9 @@ public sealed class MiracleMachineSpawnerSystem : EntitySystem
 
                 foreach (var player in comp.Inside)
                 {
+                    if (!Exists(player))
+                        continue;
+
                     if (HasComp<PsyHelmetComponent>(player))
                     {
                         if (_inventory.TryGetSlotEntity(player, "ears", out var helmet))
@@ -59,6 +64,9 @@ public sealed class MiracleMachineSpawnerSystem : EntitySystem
                         }
                         RemCompDeferred<PsyHelmetComponent>(player);
                     }
+
+                    if (_activeGhosts.Count >= 30)
+                        break;
 
                     if (!TryComp<TransformComponent>(player, out var xform))
                         continue;
@@ -74,15 +82,15 @@ public sealed class MiracleMachineSpawnerSystem : EntitySystem
                     if (spawnCoords == null)
                         continue;
 
-                    if (_activeGhosts.Count <= 30)
-                    {
-                        var ghost = _random.Pick(comp.Ghosts);
-                        var activeGhost = Spawn(ghost, spawnCoords.Value);
-                        _activeGhosts.Add(activeGhost);
-                    }
+                    var ghost = _random.Pick(comp.Ghosts);
+                    var activeGhost = Spawn(ghost, spawnCoords.Value);
+
+                    if (activeGhost == EntityUid.Invalid)
+                        continue;
+
+                    _activeGhosts.Add(activeGhost);
                 }
 
-                _activeGhosts.RemoveAll(x => !x.IsValid());
             }
 
         _miracleMachineSpawnerTime = _timing.CurTime + TimeSpan.FromSeconds(20);
