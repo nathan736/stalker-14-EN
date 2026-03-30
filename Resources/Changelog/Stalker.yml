@@ -1988,5 +1988,12 @@
   id: 209
   time: '2026-03-30T19:56:50.923944+00:00'
   url: https://github.com/coolmankid12345/stalker-14-EN/pull/713
+- author: BELNAKBU
+  changes:
+  - message: Hercules, status effect and whole new system for weight reduction/adduction
+    type: Add
+  id: 210
+  time: '2026-03-30T19:57:48.317412+00:00'
+  url: https://github.com/coolmankid12345/stalker-14-EN/pull/731
 Name: Stalker
 Order: -1
