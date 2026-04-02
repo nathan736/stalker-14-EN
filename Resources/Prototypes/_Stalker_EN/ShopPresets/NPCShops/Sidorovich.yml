@@ -399,7 +399,6 @@
         BookCookingStalkerGuide: 200
         BookCookingStalkerHomemade: 600
         STRag: 10
-        STLoggingChainsaw: 1000
         # Cameras
         STCamera: 750
         STCameraVintage: 1200

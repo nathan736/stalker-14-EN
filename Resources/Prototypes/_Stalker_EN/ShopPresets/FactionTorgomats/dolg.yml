@@ -259,7 +259,6 @@
         STCameraVintage: 1200
         STCameraDamaged: 400
         STCameraFilm: 150
-        STLoggingChainsaw: 1000
 
     - name: shop-category-modules
       priority: 11
