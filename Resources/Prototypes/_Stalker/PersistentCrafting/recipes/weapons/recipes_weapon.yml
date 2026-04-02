@@ -222,7 +222,7 @@
   id: PersistentCraftWeaponRecipeRPK74T3
   name: persistent-craft-recipe-generic-name
   description: persistent-craft-recipe-generic-desc
-  displayProto: STWeaponRifleRPK74
+  displayProto: STWeaponRifleStalkerRPK16
   branch: Weapon
   tier: 3
   requiredNode: PersistentCraftWeaponNodeRPK74T3
@@ -232,7 +232,7 @@
   - proto: STCraftAnomalyDust
     amount: 32
   results:
-  - proto: STWeaponRifleRPK74
+  - proto: STWeaponRifleStalkerRPK16
   category: weapons
   subCategory: weapon-ar-soviet
 

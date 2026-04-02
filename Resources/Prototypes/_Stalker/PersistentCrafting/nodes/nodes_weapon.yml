@@ -146,7 +146,7 @@
   description: persistent-craft-node-sub-recipe-desc
   branch: Weapon
   cost: 80
-  displayProto: STWeaponRifleRPK74
+  displayProto: STWeaponRifleStalkerRPK16
   treeColumn: 6
   treeRow: 2
   prerequisites:
