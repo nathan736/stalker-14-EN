@@ -21,6 +21,7 @@
           Radiation: -5
           Asphyxiation: -2
       interval: 1
+      ignoreResistance: true # EN
     - type: Armor
       hiddenExamine: true
       armorClass: 2
@@ -101,6 +102,7 @@
           Blunt: -0.5
           Heat: 0.3
       interval: 1
+      ignoreResistance: true # EN
     - type: Storage
       grid:
         - 0,0,2,2
@@ -139,6 +141,7 @@
           Caustic: -1
           Blunt: 0.5
       interval: 1
+      ignoreResistance: true # EN
     - type: Storage
       grid:
       - 0,0,2,2
@@ -178,6 +181,7 @@
         Cold: 2.5
         Asphyxiation: -2
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2
@@ -210,6 +214,7 @@
       types:
         Heat: -3
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2
@@ -253,6 +258,7 @@
           Radiation: 1
           Psy: 1
       interval: 1
+      ignoreResistance: true # EN
     - type: Armor
       hiddenExamine: true
       modifiers:
@@ -291,6 +297,7 @@
       types:
         Shock: 0.3
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2

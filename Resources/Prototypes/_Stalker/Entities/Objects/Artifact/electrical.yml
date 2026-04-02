@@ -22,6 +22,7 @@
       types:
         Radiation: 0.4
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2
@@ -54,6 +55,7 @@
       types:
         Radiation: 0.8
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2
@@ -100,6 +102,7 @@
         Shock: 0.3
         Asphyxiation: -0.5
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2
@@ -133,6 +136,7 @@
         Radiation: -1
         Blunt: 1
     interval: 1
+    ignoreResistance: true # EN
   - type: STWeight
     self: -1
   - type: Armor
@@ -169,6 +173,7 @@
         Radiation: 1
         Cold: 1
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2
@@ -199,6 +204,7 @@
       types:
         Radiation: 1.6
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2
@@ -230,6 +236,7 @@
   - type: PersonalDamage
     staminaDamage: -4
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2
@@ -264,6 +271,7 @@
         Radiation: -3
         Cold: -0.4
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2
@@ -294,6 +302,7 @@
         Radiation: -5
         Cold: -5
     interval: 1
+    ignoreResistance: true # EN
   - type: Armor
     hiddenExamine: true
     armorClass: 2
