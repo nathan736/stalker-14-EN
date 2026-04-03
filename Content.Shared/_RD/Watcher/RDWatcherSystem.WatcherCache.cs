@@ -24,6 +24,9 @@ public sealed partial class RDWatcherSystem
 
     private void RemoveTargetFromWatchers(EntityUid target)
     {
+        if (_net.IsClient)
+            return;
+
         for (var i = _watcherCache.Count - 1; i >= 0; i--)
         {
             var watcher = _watcherCache[i];
@@ -40,6 +43,9 @@ public sealed partial class RDWatcherSystem
 
     private void PruneWatcherTargets(HashSet<EntityUid> liveTargets)
     {
+        if (_net.IsClient)
+            return;
+
         for (var i = _watcherCache.Count - 1; i >= 0; i--)
         {
             var watcher = _watcherCache[i];
