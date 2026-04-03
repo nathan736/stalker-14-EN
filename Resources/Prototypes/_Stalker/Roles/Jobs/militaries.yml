@@ -19,7 +19,7 @@
   special:
     - !type:AddComponentSpecial
       components:
-      - type: PersistentCraftAccess
+      #- type: PersistentCraftAccess
       - type: Access
         groups:
           - MilitaryStalker
@@ -67,7 +67,7 @@
   special:
   - !type:AddComponentSpecial
     components:
-    - type: PersistentCraftAccess
+    #- type: PersistentCraftAccess
     - type: Access
       groups:
       - MilitaryStalker
@@ -115,7 +115,7 @@
   special:
     - !type:AddComponentSpecial
       components:
-      - type: PersistentCraftAccess
+      #- type: PersistentCraftAccess
       - type: Access
         groups:
           - Military
@@ -160,7 +160,7 @@
   special:
     - !type:AddComponentSpecial
       components:
-        - type: PersistentCraftAccess
+        #- type: PersistentCraftAccess
         - type: Access
           groups:
             - MilitaryHead
@@ -208,7 +208,7 @@
   special:
     - !type:AddComponentSpecial
       components:
-        - type: PersistentCraftAccess
+        #- type: PersistentCraftAccess
         - type: Access
           groups:
             - MilitaryOfficer
