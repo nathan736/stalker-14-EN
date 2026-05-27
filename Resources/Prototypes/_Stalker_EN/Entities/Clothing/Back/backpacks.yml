@@ -39,13 +39,13 @@
   parent: STClothingBackBase
   id: ClothingBackpackDuffelYellowArtifact
   name: artifactyellowhodertest
-  description: Крайне неудобный и невместительный вещмешок за копейки.
+  description: A modified sunrise bag designed and devloped by freedoms enginering team (Yes that one that always does drugs and gets nothing done!)
   components:
     - type: STWeight
       self: 29
     - type: Sprite
       sprite: _Stalker/Objects/Clothing/backpacks/Duffels/duffel.rsi
-    - type: Storage # 6 клеток подряд + доп 1 клетка отдельно (всего 7)
+    - type: Storage # 2 2x4s 1 4x8s total of 10 slots for artifacts
       maxItemSize: Normal 
       grid:
        - 0,2,1,5
@@ -66,5 +66,5 @@
     - type: PersonalDamageBlock
       quickEquip: false
     - type: RadiationBlockingContainer
-      resistance: 2
+      resistance: 20
     - type: SuppressArtifactContainer
